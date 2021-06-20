@@ -14,7 +14,8 @@ int main()
     if(n==1)
     return arr[0];
     int lastnonzeroindex=0;
-    
+    //Traverse whole array and if element is non zero just place it at beginning of array and move lastnonzeroindex pointer.Once whole array is traversed all non zero
+    //Elements are already present in start of array
     for(int i=0;i<n;i++)
     {
         if(arr[i]!=0)
@@ -24,6 +25,7 @@ int main()
         }
     }
     
+    //All non Zero element have got their place in array so at last just fill array with zeros starting from lastnonzerodindex to length of array
     for(int i=lastnonzeroindex;i<n;i++)
     {
         arr[i]=0;
